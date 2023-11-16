@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -7,14 +8,13 @@ public class LeapYearChecker extends JFrame {
     private JButton btnCheckYear;
 
     public LeapYearChecker() {
-        // Set the title of the app
+
         super("Leap Year Checker");
 
 
-        tfYear = new JTextField(10);
+        tfYear = new JTextField();
+        tfYear.setMaximumSize(new Dimension(200, 50));
         btnCheckYear = new JButton("Check Year");
-
-
         setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
 
 
@@ -34,8 +34,8 @@ public class LeapYearChecker extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        setSize(300, 150);
-        setLocationRelativeTo(null);
+        setSize(300, 200);
+
         setVisible(true);
     }
 
