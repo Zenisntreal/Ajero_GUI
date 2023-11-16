@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class SimpleCalculator extends JFrame {
     private JTextField tfNumber1, tfNumber2;
     private JComboBox<String> cbOperations;
@@ -13,6 +14,9 @@ public class SimpleCalculator extends JFrame {
         super("Simple Calculator");
 
 
+
+        ImageIcon image = new ImageIcon("logosmile.jpg");
+        setIconImage(image.getImage());
 
 
         tfNumber1 = new JTextField(10);

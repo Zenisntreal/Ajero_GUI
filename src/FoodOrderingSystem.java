@@ -12,6 +12,8 @@ public class FoodOrderingSystem extends JFrame {
     public FoodOrderingSystem() {
         super("Food Ordering System");
 
+        ImageIcon image = new ImageIcon("logosmile.jpg");
+        setIconImage(image.getImage());
 
         foodPrices = new HashMap<>();
         foodPrices.put(new JCheckBox("Pizza - Php 100"), 100.0);
@@ -63,7 +65,7 @@ public class FoodOrderingSystem extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        setSize(350, 300);
+        setSize(350, 400);
         setLocationRelativeTo(null);
         setVisible(true);
     }

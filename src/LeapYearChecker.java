@@ -10,7 +10,8 @@ public class LeapYearChecker extends JFrame {
     public LeapYearChecker() {
 
         super("Leap Year Checker");
-
+        ImageIcon image = new ImageIcon("logosmile.jpg");
+        setIconImage(image.getImage());
 
         tfYear = new JTextField();
         tfYear.setMaximumSize(new Dimension(200, 50));
@@ -47,7 +48,13 @@ public class LeapYearChecker extends JFrame {
             boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
 
-            String message = isLeapYear ? "Leap year" : "Not a leap year";
+            String message;
+            if (isLeapYear) {
+                message = "Leap year";
+            } else {
+                message = "Not a leap year";
+            }
+
             JOptionPane.showMessageDialog(null, message, "Leap Year Checker", JOptionPane.INFORMATION_MESSAGE);
         } catch (NumberFormatException ex) {
             JOptionPane.showMessageDialog(null, "Invalid input. Please enter a valid year.", "Error", JOptionPane.ERROR_MESSAGE);
